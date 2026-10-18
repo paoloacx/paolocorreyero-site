@@ -1,17 +1,16 @@
 /**
- * i18n helper for Paolo Correyero's personal site.
- * Designed to gracefully support future multilingual features without overriding existing markup.
+ * i18n helper for Paolo Álvarez Correyero's site (paolocorreyero.es).
  */
 const translations = {
   es: {
-    "site.title": "Paolo Correyero | Poeta",
-    "site.description": "Sitio web oficial del poeta Paolo Correyero (Madrid, 1985). Accésit del Premio Adonáis 2004 por 'Hoy cumplo 16' (Ediciones Rialp).",
-    "site.author": "Paolo Correyero",
+    "site.title": "Paolo Álvarez Correyero | Poeta",
+    "site.description": "Sitio web oficial del poeta español Paolo Álvarez Correyero (Madrid, 1985). Accésit del Premio Adonáis 2004 por 'Hoy cumplo 16' (Ediciones Rialp).",
+    "site.author": "Paolo Álvarez Correyero",
   },
   en: {
-    "site.title": "Paolo Correyero | Poet",
-    "site.description": "Official website of Spanish poet Paolo Correyero (Madrid, 1985). Adonáis Poetry Award Runner-up 2004 for 'Hoy cumplo 16' (Rialp).",
-    "site.author": "Paolo Correyero",
+    "site.title": "Paolo Álvarez Correyero | Poet",
+    "site.description": "Official website of Spanish poet Paolo Álvarez Correyero (Madrid, 1985). Adonáis Poetry Award Runner-up 2004 for 'Hoy cumplo 16' (Rialp).",
+    "site.author": "Paolo Álvarez Correyero",
   },
 };
 
