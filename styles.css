@@ -8,8 +8,7 @@
   --paper-bg: #fbf9f5;
   --paper-ink: #1c1b18;
   --paper-muted: #6b665f;
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Inter", -apple-system, sans-serif;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -52,12 +51,12 @@ header {
 }
 
 .brand {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--text-main);
   text-decoration: none;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
 }
 
 nav ul {
@@ -102,11 +101,12 @@ section {
 }
 
 .section-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
   color: var(--text-main);
-  line-height: 1.15;
+  line-height: 1.1;
   margin-bottom: 0.4rem;
 }
 
@@ -126,17 +126,17 @@ section {
 }
 
 .hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 6.5vw, 4.75rem);
+  font-family: var(--font-sans);
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
   font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.1;
-  margin-bottom: 0.6rem;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
   color: #f7f4ee;
 }
 
 .hero .lead {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--accent);
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -149,7 +149,7 @@ section {
 
 .prose p {
   margin-bottom: 1.5rem;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   color: #d1d5db;
   text-align: justify;
   text-justify: inter-word;
@@ -157,10 +157,11 @@ section {
 }
 
 .prose h3 {
-  font-family: var(--font-serif);
-  font-size: 1.65rem;
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
   color: var(--accent);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   margin: 2.5rem 0 1rem;
 }
 
@@ -182,10 +183,11 @@ section {
 }
 
 .timeline-year {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--accent);
+  letter-spacing: -0.02em;
 }
 
 .timeline-content strong {
@@ -223,11 +225,12 @@ section {
 }
 
 .recital-card h4 {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
   color: var(--text-main);
   margin-bottom: 0.5rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .recital-card p {
@@ -260,19 +263,20 @@ section {
 }
 
 .book-year {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
   color: var(--accent);
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .book-details h3 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
   font-weight: 600;
-  font-style: italic;
+  letter-spacing: -0.02em;
   color: var(--text-main);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 .book-meta {
@@ -334,10 +338,11 @@ section {
 .sub-category {
   margin-top: 4rem;
   margin-bottom: 1rem;
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
   color: var(--accent);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 /* Crítica */
@@ -356,15 +361,15 @@ article.review-item {
 }
 
 .review-title {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
   font-weight: 600;
   color: var(--text-main);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 }
 
 .review-author {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -379,17 +384,16 @@ article.review-item {
 }
 
 .review-excerpt {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-style: italic;
-  line-height: 1.65;
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.7;
   color: #dcd8d0;
   border-left: 3px solid var(--accent);
   padding-left: 1.5rem;
   margin-bottom: 1.75rem;
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
 }
 
 details.review-accordion {
@@ -465,18 +469,17 @@ details[open] .btn-text-close {
 }
 
 .review-full-text p {
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 1.02rem;
+  line-height: 1.8;
   color: #d1d5db;
   margin-bottom: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
 }
 
 .review-full-text p strong {
   color: #f7f4ee;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .review-full-text p em {
@@ -512,10 +515,10 @@ details[open] .btn-text-close {
 }
 
 .poem-book-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 500;
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
   color: #f7f4ee;
   line-height: 1.15;
 }
@@ -525,7 +528,7 @@ details[open] .btn-text-close {
   font-size: 1rem;
   font-style: normal;
   color: var(--text-muted);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   margin-left: 0.6rem;
   font-weight: 300;
 }
@@ -549,11 +552,11 @@ details[open] .btn-text-close {
 }
 
 .poem-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
   font-weight: 600;
   color: var(--paper-ink);
-  letter-spacing: 0.01em;
+  letter-spacing: -0.03em;
 }
 
 .poem-type-tag {
@@ -564,16 +567,16 @@ details[open] .btn-text-close {
   font-weight: 500;
 }
 
-/* Tipografía de los versos */
+/* Tipografía de los versos (Inter / sans-serif) */
 .poem-reading-area {
   max-width: 580px;
 }
 
 .poem-epigraph {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   color: var(--paper-muted);
-  font-size: 1.05rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   padding-left: 1.2rem;
   border-left: 2px solid #8c8270;
@@ -581,13 +584,14 @@ details[open] .btn-text-close {
 }
 
 .poem-verse-stanza {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  line-height: 1.95;
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  line-height: 1.9;
   color: #262420;
+  font-weight: 300;
   white-space: pre-line;
-  margin-bottom: 2.25rem;
-  letter-spacing: 0.01em;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
 }
 
 .poem-verse-stanza:last-child {
@@ -599,9 +603,8 @@ details[open] .btn-text-close {
   margin-top: 3.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(28, 27, 24, 0.1);
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
   color: var(--paper-muted);
   text-align: right;
 }
@@ -693,7 +696,7 @@ footer {
     gap: 0.35rem;
   }
   .review-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
   details.review-accordion summary.review-btn {
     width: 100%;
