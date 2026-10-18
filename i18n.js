@@ -1,26 +1,40 @@
+/**
+ * i18n helper for Paolo Correyero's personal site.
+ * Designed to gracefully support future multilingual features without overriding existing markup.
+ */
 const translations = {
   es: {
-    "site.description": "Sitio personal de Paolo Correyero, poeta.",
-    "site.title": "Paolo Correyero",
-    "site.status": "Próximamente",
-    "site.name": "Paolo Correyero",
-    "site.intro": "Poeta.",
+    "site.title": "Paolo Correyero | Poeta",
+    "site.description": "Sitio web oficial del poeta Paolo Correyero (Madrid, 1985). Accésit del Premio Adonáis 2004 por 'Hoy cumplo 16' (Ediciones Rialp).",
+    "site.author": "Paolo Correyero",
+  },
+  en: {
+    "site.title": "Paolo Correyero | Poet",
+    "site.description": "Official website of Spanish poet Paolo Correyero (Madrid, 1985). Adonáis Poetry Award Runner-up 2004 for 'Hoy cumplo 16' (Rialp).",
+    "site.author": "Paolo Correyero",
   },
 };
 
-const language = "es";
-const messages = translations[language];
-
-document.documentElement.lang = language;
+const currentLang = document.documentElement.lang || "es";
+const messages = translations[currentLang] || translations.es;
 
 document.querySelectorAll("[data-i18n]").forEach((element) => {
-  element.textContent = messages[element.dataset.i18n];
+  const key = element.dataset.i18n;
+  if (messages[key]) {
+    element.textContent = messages[key];
+  }
 });
 
 document.querySelectorAll("[data-i18n-content]").forEach((element) => {
-  element.content = messages[element.dataset.i18nContent];
+  const key = element.dataset.i18nContent;
+  if (messages[key]) {
+    element.content = messages[key];
+  }
 });
 
 document.querySelectorAll("[data-i18n-title]").forEach((element) => {
-  document.title = messages[element.dataset.i18nTitle];
+  const key = element.dataset.i18nTitle;
+  if (messages[key]) {
+    element.title = messages[key];
+  }
 });

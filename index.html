@@ -3,16 +3,173 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Sitio personal de Paolo Correyero, poeta." data-i18n-content="site.description" />
-    <title data-i18n-title="site.title"></title>
+    <title>Paolo Correyero | Poeta · Obra</title>
+    <meta name="description" content="Sitio web oficial del poeta Paolo Correyero (Madrid, 1985). Accésit del Premio Adonáis 2004 por 'Hoy cumplo 16' (Ediciones Rialp). Obra, biografía, poemas y crítica." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="i18n.js" defer></script>
   </head>
   <body>
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header>
+      <div class="nav-container">
+        <a href="index.html" class="brand">Paolo Correyero</a>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="index.html" class="active">Obra</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="poemas.html">Poemas</a></li>
+            <li><a href="critica.html">Crítica</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-      <p class="eyebrow" data-i18n="site.status"></p>
-      <h1 data-i18n="site.name"></h1>
-      <p class="intro" data-i18n="site.intro"></p>
+      <!-- SECCIÓN HERO -->
+      <section class="hero">
+        <span class="eyebrow">Sitio web oficial</span>
+        <h1>Paolo Correyero</h1>
+        <p class="lead">
+          Poeta y escritor madrileño. Accésit del Premio Adonáis de Poesía 2004 por el poemario <em>Hoy cumplo 16</em> (Ediciones Rialp, 2005).
+        </p>
+        <div class="hero-actions">
+          <a href="poemas.html" class="btn-primary">Leer poemas</a>
+          <a href="biografia.html" class="btn-outline">Conocer trayectoria</a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN OBRA -->
+      <section id="obra">
+        <h2 class="sub-category">Libros de poesía</h2>
+
+        <div class="books-list">
+          <article class="book-item">
+            <div class="book-year">2005</div>
+            <div class="book-details">
+              <h3>Hoy cumplo 16</h3>
+              <p class="book-meta">Ediciones Rialp, Colección Adonáis (nº 578), Madrid. 64 págs. ISBN: 978-84-321-3536-1.</p>
+              <div>
+                <span class="book-award">Accésit del Premio Adonáis de Poesía 2004</span>
+              </div>
+              <p class="book-synopsis">
+                Obra galardonada a los diecinueve años del autor en el certamen poético más emblemático de las letras hispanas. El poemario explora con honda autenticidad, frescura expresiva y precisión rítmica el territorio fronterizo entre la infancia y la adolescencia, capturando la intemperie del crecimiento y el descubrimiento de la propia mirada.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <h2 class="sub-category">Antologías poéticas</h2>
+
+        <div class="books-list">
+          <article class="book-item">
+            <div class="book-year">2006</div>
+            <div class="book-details">
+              <h3>El tejedor en… Madrid</h3>
+              <p class="book-meta">Edición y selección de David González. Colección <em>La única puerta a la izquierda</em>, Madrid.</p>
+              <p class="book-synopsis">
+                Muestra antológica que reúne las voces poéticas más singulares y vivas vinculadas a la escena literaria de Madrid, compartiendo páginas junto a escritores como Carlos Salem, Ángel Petisme y Alberto García-Teresa.
+              </p>
+            </div>
+          </article>
+
+          <article class="book-item">
+            <div class="book-year">2003</div>
+            <div class="book-details">
+              <h3>En pie de paz. Escritores contra la guerra</h3>
+              <p class="book-meta">Editorial Plurabelle, Córdoba. Prólogo y recopilación colectiva.</p>
+              <p class="book-synopsis">
+                Volumen coral de compromiso ético y literario que congregó la voz de poetas y narradores frente al conflicto bélico internacional y la defensa de la dignidad civil.
+              </p>
+            </div>
+          </article>
+
+          <article class="book-item">
+            <div class="book-year">—</div>
+            <div class="book-details">
+              <h3>Pieles, poemas, rumores</h3>
+              <p class="book-meta">Antología poética.</p>
+              <p class="book-synopsis">
+                Compilación literaria colectiva en torno a la corporalidad, el testimonio íntimo y el pulso de la nueva lírica.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <h2 class="sub-category">Publicaciones en revistas literarias</h2>
+
+        <div class="books-list">
+          <article class="book-item">
+            <div class="book-year">2006</div>
+            <div class="book-details">
+              <h3>Revista Viento Sur</h3>
+              <p class="book-meta">Número 85 (abril de 2006), Madrid. Sección de Cultura y Literatura, págs. 95-100.</p>
+              <p class="book-synopsis">
+                Publicación del ensayo crítico y reseña monográfica de Antonio Crespo Massieu dedicada a la poética de Paolo Álvarez Correyero y su libro <em>Hoy cumplo 16</em>.
+              </p>
+            </div>
+          </article>
+
+          <article class="book-item">
+            <div class="book-year">2004</div>
+            <div class="book-details">
+              <h3>Revista MÜSU</h3>
+              <p class="book-meta">Revista de creación poética y pensamiento, Número 4, Córdoba.</p>
+              <p class="book-synopsis">
+                Colaboración poética en una de las publicaciones periódicas de referencia del panorama lírico andaluz contemporáneo.
+              </p>
+            </div>
+          </article>
+
+          <article class="book-item">
+            <div class="book-year">—</div>
+            <div class="book-details">
+              <h3>Revista El tejedor en Madrid</h3>
+              <p class="book-meta">Publicación de difusión literaria y poesía independiente.</p>
+              <p class="book-synopsis">
+                Textos poéticos en el espacio de encuentro para la literatura urbana y contemporánea madrileña.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <h2 class="sub-category">Lecturas poéticas y recitales</h2>
+
+        <div class="recital-grid">
+          <div class="recital-card">
+            <h4>Residencia de Estudiantes de Madrid</h4>
+            <p>Lectura poética con motivo de la celebración cultural de la <em>Noche en blanco</em> en la colina de los chopos, histórico epicentro literario de Madrid.</p>
+          </div>
+
+          <div class="recital-card">
+            <h4>Monasterio de Yuste</h4>
+            <p>Lectura y recital poético en el Real Monasterio de San Jerónimo de Yuste (Cuacos de Yuste, Cáceres), espacio de recogimiento y memoria patrimonial.</p>
+          </div>
+
+          <div class="recital-card">
+            <h4>Recitales en Madrid, Córdoba y España</h4>
+            <p>Intervenciones en ciclos de poesía contemporánea, librerías independientes, ateneos y encuentros poéticos en diversas ciudades españolas.</p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <ul class="footer-nav">
+        <li><a href="index.html">Obra</a></li>
+        <li><a href="biografia.html">Biografía</a></li>
+        <li><a href="poemas.html">Poemas</a></li>
+        <li><a href="critica.html">Crítica</a></li>
+      </ul>
+      <p class="footer-contact">
+        Contacto: <a href="mailto:info@paolocorreyero.es">info@paolocorreyero.es</a>
+      </p>
+      <p class="footer-copy">
+        © Paolo Correyero · paolocorreyero.es
+      </p>
+    </footer>
   </body>
 </html>
