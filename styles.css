@@ -1,13 +1,23 @@
 :root {
-  --bg-color: #0f1015;
-  --bg-secondary: #15171e;
-  --text-main: #eae7e1;
-  --text-muted: #9ca3af;
-  --accent: #c4b58e;
-  --border-color: rgba(196, 181, 142, 0.18);
-  --paper-bg: #fbf9f5;
-  --paper-ink: #1c1b18;
-  --paper-muted: #6b665f;
+  --bg-color: #18191c;
+  --bg-secondary: #202227;
+  --bg-card: #22242a;
+  --text-main: #edf0f2;
+  --text-muted: #9aa1ad;
+  --text-dim: #717782;
+  
+  /* Verde Camo / Military Olive */
+  --accent: #869e74;
+  --accent-light: #9ab486;
+  --accent-dim: #6d825d;
+  --accent-bg: rgba(134, 158, 116, 0.12);
+  --border-color: rgba(134, 158, 116, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+
+  /* Soporte de lectura poética */
+  --paper-bg: #202329;
+  --paper-ink: #f0f2f5;
+  --paper-muted: #a1a8b3;
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -26,7 +36,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   line-height: 1.75;
-  background-image: radial-gradient(circle at 50% 0%, rgba(196, 181, 142, 0.06), transparent 60%);
+  background-image: radial-gradient(circle at 50% 0%, rgba(134, 158, 116, 0.08), transparent 65%);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,9 +45,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(15, 16, 21, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(24, 25, 28, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -57,6 +67,11 @@ header {
   color: var(--text-main);
   text-decoration: none;
   letter-spacing: -0.03em;
+  transition: color 0.2s ease;
+}
+
+.brand:hover {
+  color: var(--accent);
 }
 
 nav ul {
@@ -78,7 +93,7 @@ nav a {
 nav a:hover,
 nav a.active {
   color: var(--accent);
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 /* Contenedor principal */
@@ -105,7 +120,7 @@ section {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 600;
   letter-spacing: -0.04em;
-  color: var(--text-main);
+  color: #ffffff;
   line-height: 1.1;
   margin-bottom: 0.4rem;
 }
@@ -116,41 +131,43 @@ section {
   letter-spacing: 0.16em;
   color: var(--accent);
   display: block;
+  font-weight: 500;
 }
 
 /* Portada */
 .hero {
-  padding: 5rem 0 3.5rem;
+  padding: 5.5rem 0 3.75rem;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
 }
 
 .hero h1 {
   font-family: var(--font-sans);
-  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  font-size: clamp(2.6rem, 7.5vw, 4.6rem);
   font-weight: 600;
   letter-spacing: -0.05em;
   line-height: 1.05;
-  margin-bottom: 0.75rem;
-  color: #f7f4ee;
+  margin-bottom: 0.85rem;
+  color: #ffffff;
 }
 
 .hero .lead {
   font-size: 0.88rem;
   color: var(--accent);
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* Biografía */
 .prose {
-  max-width: 700px;
+  max-width: 720px;
 }
 
 .prose p {
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
-  color: #d1d5db;
+  color: #d6dbe0;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -160,9 +177,9 @@ section {
   font-family: var(--font-sans);
   font-size: 1.45rem;
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
-  margin: 2.5rem 0 1rem;
+  margin: 2.75rem 0 1rem;
 }
 
 .timeline-list {
@@ -179,7 +196,7 @@ section {
   gap: 1.5rem;
   align-items: baseline;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .timeline-year {
@@ -215,19 +232,20 @@ section {
 
 .recital-card {
   background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-subtle);
   padding: 1.75rem;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .recital-card:hover {
   border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .recital-card h4 {
   font-family: var(--font-sans);
   font-size: 1.25rem;
-  color: var(--text-main);
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -254,7 +272,7 @@ section {
   gap: 1.5rem;
   align-items: baseline;
   padding-bottom: 1.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .book-item:last-child {
@@ -275,7 +293,7 @@ section {
   font-size: 1.45rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--text-main);
+  color: #ffffff;
   margin-bottom: 0.35rem;
 }
 
@@ -293,7 +311,7 @@ section {
   letter-spacing: 0.04em;
   border: 1px solid var(--border-color);
   padding: 0.2rem 0.65rem;
-  background: rgba(196, 181, 142, 0.05);
+  background: var(--accent-bg);
 }
 
 /* Botón de compra / enlace directo */
@@ -303,12 +321,12 @@ section {
   gap: 0.5rem;
   margin-top: 0.75rem;
   margin-left: 0.5rem;
-  padding: 0.25rem 0.85rem;
+  padding: 0.3rem 0.95rem;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
-  background: rgba(196, 181, 142, 0.1);
+  color: var(--accent-light);
+  background: var(--accent-bg);
   border: 1px solid var(--accent);
   text-decoration: none;
   font-weight: 500;
@@ -317,7 +335,7 @@ section {
 
 .book-buy-btn:hover {
   background: var(--accent);
-  color: #0f1015;
+  color: #121315;
 }
 
 .book-actions-row {
@@ -331,7 +349,7 @@ section {
 .book-synopsis {
   margin-top: 0.75rem;
   font-size: 0.95rem;
-  color: #c5c8cf;
+  color: #cbd1d9;
   line-height: 1.65;
 }
 
@@ -341,16 +359,21 @@ section {
   font-family: var(--font-sans);
   font-size: 1.45rem;
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 /* Crítica */
 article.review-item {
   background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-subtle);
   padding: 2.25rem 2.25rem;
   margin-bottom: 2.5rem;
+  transition: border-color 0.2s ease;
+}
+
+article.review-item:hover {
+  border-color: var(--border-color);
 }
 
 .review-summary-header {
@@ -364,7 +387,7 @@ article.review-item {
   font-family: var(--font-sans);
   font-size: 1.45rem;
   font-weight: 600;
-  color: var(--text-main);
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
@@ -388,7 +411,7 @@ article.review-item {
   font-size: 1.15rem;
   font-weight: 300;
   line-height: 1.7;
-  color: #dcd8d0;
+  color: #d6dbe0;
   border-left: 3px solid var(--accent);
   padding-left: 1.5rem;
   margin-bottom: 1.75rem;
@@ -418,6 +441,9 @@ details.poem-accordion summary.poem-expand-btn {
   text-transform: uppercase;
   user-select: none;
   transition: all 0.2s ease;
+  color: var(--accent-light);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent);
 }
 
 details.review-accordion summary.review-btn::-webkit-details-marker,
@@ -425,15 +451,9 @@ details.poem-accordion summary.poem-expand-btn::-webkit-details-marker {
   display: none;
 }
 
-details.review-accordion summary.review-btn {
-  color: var(--text-main);
-  background: rgba(196, 181, 142, 0.1);
-  border: 1px solid var(--accent);
-}
-
 details.review-accordion summary.review-btn:hover {
   background: var(--accent);
-  color: #0f1015;
+  color: #121315;
 }
 
 .review-btn-icon {
@@ -465,20 +485,20 @@ details[open] .btn-text-close {
 .review-full-text {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .review-full-text p {
   font-size: 1.02rem;
   line-height: 1.8;
-  color: #d1d5db;
+  color: #cfd4db;
   margin-bottom: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
 }
 
 .review-full-text p strong {
-  color: #f7f4ee;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -488,7 +508,7 @@ details[open] .btn-text-close {
 }
 
 /* =========================================================
-   SECCIÓN DE POEMAS (Diseño sobre soporte de papel)
+   SECCIÓN DE POEMAS (Diseño editorial en gris oscuro y verde camo)
    ========================================================= */
 
 .poem-book-section {
@@ -519,7 +539,7 @@ details[open] .btn-text-close {
   font-size: clamp(2rem, 4.5vw, 2.75rem);
   font-weight: 600;
   letter-spacing: -0.04em;
-  color: #f7f4ee;
+  color: #ffffff;
   line-height: 1.15;
 }
 
@@ -533,19 +553,21 @@ details[open] .btn-text-close {
   font-weight: 300;
 }
 
-/* Pliego de papel editorial */
+/* Pliego de lectura en superficie pizarra con acento verde camo */
 .paper-sheet {
   background: var(--paper-bg);
   color: var(--paper-ink);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent);
   padding: 4.5rem 4rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   margin-bottom: 3.5rem;
 }
 
 .poem-meta-header {
   margin-bottom: 3rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(28, 27, 24, 0.12);
+  border-bottom: 1px solid var(--border-subtle);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -555,7 +577,7 @@ details[open] .btn-text-close {
   font-family: var(--font-sans);
   font-size: clamp(1.6rem, 3.2vw, 2.1rem);
   font-weight: 600;
-  color: var(--paper-ink);
+  color: #ffffff;
   letter-spacing: -0.03em;
 }
 
@@ -563,34 +585,23 @@ details[open] .btn-text-close {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--paper-muted);
+  color: var(--accent);
   font-weight: 500;
 }
 
 /* Tipografía de los versos (Inter / sans-serif) */
 .poem-reading-area {
-  max-width: 580px;
-}
-
-.poem-epigraph {
-  font-family: var(--font-sans);
-  font-style: italic;
-  color: var(--paper-muted);
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  padding-left: 1.2rem;
-  border-left: 2px solid #8c8270;
-  line-height: 1.6;
+  max-width: 600px;
 }
 
 .poem-verse-stanza {
   font-family: var(--font-sans);
-  font-size: 1.12rem;
-  line-height: 1.9;
-  color: #262420;
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #e4e7eb;
   font-weight: 300;
   white-space: pre-line;
-  margin-bottom: 2rem;
+  margin-bottom: 2.15rem;
   letter-spacing: -0.01em;
 }
 
@@ -598,15 +609,20 @@ details[open] .btn-text-close {
   margin-bottom: 0;
 }
 
-/* Pie de poema con fuente editorial */
+/* Pie de poema */
 .poem-footer-meta {
   margin-top: 3.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(28, 27, 24, 0.1);
+  border-top: 1px solid var(--border-subtle);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--paper-muted);
   text-align: right;
+}
+
+.poem-footer-meta em {
+  color: var(--accent-light);
+  font-style: italic;
 }
 
 /* Footer común */
@@ -647,16 +663,22 @@ footer {
 }
 
 .footer-contact a {
-  color: var(--accent);
+  color: var(--accent-light);
   text-decoration: none;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .footer-copy {
   margin-top: 0.5rem;
   font-size: 0.82rem;
-  color: #6b7280;
+  color: var(--text-dim);
 }
 
 @media (max-width: 768px) {
