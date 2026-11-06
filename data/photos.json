@@ -1,4 +1,15 @@
 {
   "version": 1,
-  "photos": []
+  "photos": [
+    {
+      "id": "63ea8196-ced5-46fd-bc3c-3177d48472bc",
+      "title": "One day",
+      "caption": "",
+      "alt": "",
+      "src": "assets/photos/63ea8196-ced5-46fd-bc3c-3177d48472bc-image.png",
+      "thumbnail": "assets/photos/63ea8196-ced5-46fd-bc3c-3177d48472bc-thumb.webp",
+      "width": 1228,
+      "height": 717
+    }
+  ]
 }
