@@ -823,3 +823,5 @@ footer {
 
 /* Galería: navegación ampliada sin recortes */
 .nav-container{max-width:1160px;gap:1.5rem}.brand{white-space:nowrap}nav ul{gap:1.2rem}nav a{font-size:.75rem;white-space:nowrap}@media(min-width:641px) and (max-width:1000px){.nav-container{flex-direction:column;gap:.75rem}}
+
+.footer-nav{flex-wrap:wrap;justify-content:center}
