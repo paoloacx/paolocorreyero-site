@@ -13,4 +13,4 @@ export async function gh(token,path,method='GET',body){const r=await fetch('http
 export function sendError(res,e){res.status(e.status||500).json({error:e.status?e.message:'No se pudo completar la operación.'})}
 export const nonce=()=>randomBytes(32).toString('base64url');
 export const base='/repos/'+REPO;
-export function validPath(p){return /^assets\/photos\/[a-f0-9-]{36}-(?:image|thumb)\.webp$/.test(p)}
+export function validPath(p){return /^assets\/photos\/[a-f0-9-]{36}-(?:image|thumb)\.(?:webp|png)$/.test(p)}

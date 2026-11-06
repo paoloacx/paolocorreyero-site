@@ -1,0 +1,1 @@
+libheif-js 1.23.5, libheif and libde265. LGPL-3.0. Loaded as an independent replaceable browser module. Source and build scripts: https://github.com/catdad-experiments/libheif-js/tree/v1.23.5 and https://github.com/strukturag/libheif and https://github.com/strukturag/libde265 . No modifications to decoder bundle. See accompanying license files.
